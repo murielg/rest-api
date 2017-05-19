@@ -1,24 +1,23 @@
-# README
+## Rails 5 API + JSON API 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Active Model Serializer and rack-cors
 
-Things you may want to cover:
+### What you'll need
 
-* Ruby version
+- Rails 5 and ActiveModel Serializer. 
+- Ruby version >= **2.3.4**
+- Your own server/database
 
-* System dependencies
+### You Know What To Do
 
-* Configuration
+- `$ bundle install`
 
-* Database creation
+```
+$ rails db:create
+$ rails db:migrate
+$ rails db:seed
+```
 
-* Database initialization
+- `$ rails s`
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Navigate to `http://localhost:3000`
