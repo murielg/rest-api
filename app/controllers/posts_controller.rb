@@ -3,13 +3,16 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @posts = Post.all
+    #@posts = Post.all
+    @posts = Post.where(post_params)
 
     render json: @posts
   end
 
   # GET /posts/1
   def show
+    @post = Post.find(params[:id])
+    
     render json: @post
   end
 
@@ -26,6 +29,8 @@ class PostsController < ApplicationController
 
   # PATCH/PUT /posts/1
   def update
+    @post = Post.find(params[:id])
+    
     if @post.update(post_params)
       render json: @post
     else
@@ -35,7 +40,10 @@ class PostsController < ApplicationController
 
   # DELETE /posts/1
   def destroy
+    @post = Post.find(params[:id])
     @post.destroy
+
+    head :no_content
   end
 
   private

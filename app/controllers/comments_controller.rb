@@ -10,6 +10,8 @@ class CommentsController < ApplicationController
 
   # GET /comments/1
   def show
+    @comment = Comment.find(params[:id])
+
     render json: @comment
   end
 
@@ -26,6 +28,8 @@ class CommentsController < ApplicationController
 
   # PATCH/PUT /comments/1
   def update
+    @comment = Comment.find(params[:id])
+
     if @comment.update(comment_params)
       render json: @comment
     else
@@ -35,7 +39,10 @@ class CommentsController < ApplicationController
 
   # DELETE /comments/1
   def destroy
+    @comment = Comment.find(params[:id])
     @comment.destroy
+
+    head :no_content
   end
 
   private
