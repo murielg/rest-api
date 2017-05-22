@@ -3,8 +3,8 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    #@posts = Post.all
-    @posts = Post.where(post_params)
+    @posts = Post.all
+    #@posts = Post.where(post_params)
 
     render json: @posts
   end
