@@ -6,7 +6,6 @@ Active Model Serializer and rack-cors
 
 - Rails 5 and ActiveModel Serializer. 
 - Ruby version >= **2.3.4**
-- Your own server/database
 
 ### You Know What To Do
 
